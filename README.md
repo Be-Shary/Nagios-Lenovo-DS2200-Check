@@ -4,8 +4,18 @@ This is a simple plugin to monitor Lenovo DS2200 storage using SSH protocol.
 ## Overview
 It was written in a hurry so I know the code is a bit messy. Maybe I'll fix it someday. For now, it works and that's enough.
 
+## Requirements
+It has been tested on:
+* Python (2.7.6 && 3.9.5)
+* Lenovo ThinkSystem DS2200 - ver. GT280R008-04
+* Ubuntu 20.04
+* CentOS (7.0 && 8.0)
+
+It's require PARAMIKO:
+`pip install paramiko`
+
 ### How it works
-Plugin connect to storage via ssh and check what you need. If all health elements of check will be OK (or N/A in some cases), respond for nagios will be OK (GREEN). If there will be error or fail, plug in return CRITICAL alert
+Plugin connect to storage via ssh and check what you need. If all health elements of check will be OK (or N/A in some cases), the nagios response will be OK (GREEN). If there will be error or fail, plug in return CRITICAL alert. Only initiators check will return warning if some problem will found.
 
 ### How to use it
 
